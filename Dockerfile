@@ -16,5 +16,5 @@
 
 #Segunda Etapa
 FROM nginx:latest
-COPY ./dist/* /usr/share/nginx/html
+COPY ./dist/bases/* /usr/share/nginx/html
 
