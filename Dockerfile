@@ -16,5 +16,5 @@ RUN npm run build --prod
 
 #Segunda Etapa
 FROM nginx:latest
-COPY --from=build-step ./dist/* /usr/share/nginx/html
+COPY --from=build-step /app/dist/* /usr/share/nginx/html
 
