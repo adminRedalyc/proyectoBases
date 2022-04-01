@@ -1,20 +1,20 @@
 
 #Primera Etapa
-FROM  node:latest as build-step
+#FROM  node:latest as build-step
 
-RUN mkdir -p /app
+#RUN mkdir -p /app
 
-WORKDIR /app
+#WORKDIR /app
 
-COPY package.json /app
+#COPY package.json /app
 
-RUN npm install
+#RUN npm install
 
-COPY . /app
+#COPY . /app
 
-RUN npm run build --prod
+#RUN npm run build --prod
 
 #Segunda Etapa
 FROM nginx:latest
-COPY --from=build-step /app/dist/* /usr/share/nginx/html
+COPY ./dist/bases/* /usr/share/nginx/html
 
